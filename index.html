@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth-Login-Task</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="authContainer">
+        <div class="card authCard">
+            <div class="card-body">
+                <nav>
+                    <div class="nav nav-pills" id="nav-tab" role="tablist">
+                        <button class="nav-link " id="nav-home-tab" data-toggle="tab" data-target="#loginTab"
+                            type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                            Login
+                        </button>
+                        <button class="nav-link active" id="nav-profile-tab" data-toggle="tab" data-target="#signUpTab"
+                            type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Sign Up</button>
+                    </div>
+                </nav>
+
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show " id="loginTab" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="loginEmail">Enter Email</label>
+                                <input type="text" class="form-control" id="loginEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loginPassword">Enter Password</label>
+                                <input type="text" class="form-control" id="loginPassword" required>
+                            </div>
+                            <button class="btn btn-sm btn-block btn-outline-primary" type="submit">Login</button>
+                        </form>
+                    </div>
+
+
+                    <div class="tab-pane fade show active" id="signUpTab" role="tabpanel"
+                        aria-labelledby="nav-profile-tab">
+                        <form id="signUpForm">
+                            <div class="form-group">
+                                <label for="signUpEmail">Enter Email</label>
+                                <input type="text" class="form-control" id="signUpEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signUpPassword">Enter Password</label>
+                                <input type="text" class="form-control" id="signUpPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signUpUser">Enter UserRole</label>
+                                <select class="form-control" id="signUpUser">
+                                    <option value="admin">Admin</option>
+                                    <option value="buyer">Buyer</option>
+                                    <option value="superAdmin">superAdmin</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-sm btn-block btn-outline-primary" type="submit">SignUp</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="spinner d-none" id="spinner">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/auth.js"></script>
+</body>
+
+</html>
